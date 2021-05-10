@@ -20,3 +20,5 @@ Through the module chain network constituted by the **LSTM cell units**, the fut
 The following figure is the neural unit structure of the LSTM neural network. Specific and detailed introduction of LSTM structure is in the attached paper.
 
 ![image](https://github.com/algo21-116020074/Assignment2/blob/main/LSTM_Image.png)
+
+## 3. LSTM Python Coding Part
