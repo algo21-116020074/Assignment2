@@ -22,3 +22,12 @@ The following figure is the neural unit structure of the LSTM neural network. Sp
 ![image](https://github.com/algo21-116020074/Assignment2/blob/main/LSTM_Image.png)
 
 ## 3. LSTM Python Coding Part
+
+### 3.1 Data
+
+Data gained from JoinQuant:
+```
+df = get_bars(security="600519.XSHG", count=5000, unit='1d',
+         fields=['date','open','high','low','close','volume','money'],
+         include_now=False, end_dt=None, fq_ref_date=None, df=True)
+```
