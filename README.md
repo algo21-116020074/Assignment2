@@ -54,7 +54,8 @@ Use past 50-day closing price data to predict future 5-day closing price.
 
 Train set and test set are splitted by 4:1
 
-(3) ```
+(3) 
+```
 model = keras.Sequential()
 model.add(layers.LSTM(64, return_sequences=True, input_shape=(X_train.shape[1:])))
 model.add(layers.LSTM(64, return_sequences=True))
@@ -73,3 +74,5 @@ history = model.fit(X_train, y_train,
 ```
 
 Tensorflow is used as the deep learning structure. Set 4 layers: first LSTM layer's dimension is 64; second LSTM layer's dimension is 64; third LSTM layer's dimension is 32; Forth Dropout layer's dimension is 5 and dropout rate is 0.1, which is to predict future 5-day. Adam optimizer was used for estimation parameters, LR attenuation mode was adopted for learning rate, and the maximum number of iterations was set to 70 times. 
+
+According to the curve of loss; If the accuracy of the curve after the train is stable is too much higher than that of the test, it is generally overfitting.
