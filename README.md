@@ -75,4 +75,13 @@ history = model.fit(X_train, y_train,
 
 Tensorflow is used as the deep learning structure. Set 4 layers: first LSTM layer's dimension is 64; second LSTM layer's dimension is 64; third LSTM layer's dimension is 32; Forth Dropout layer's dimension is 5 and dropout rate is 0.1, which is to predict future 5-day. Adam optimizer was used for estimation parameters, LR attenuation mode was adopted for learning rate, and the maximum number of iterations was set to 70 times. 
 
+## 4. Outcomes
+
+![image](https://user-images.githubusercontent.com/78721777/117746725-71641400-b23f-11eb-993c-cd2f08ab6232.png)
+
 According to the curve of loss; If the accuracy of the curve after the train is stable is too much higher than that of the test, it is generally overfitting.
+
+![image](https://user-images.githubusercontent.com/78721777/117746807-98bae100-b23f-11eb-8757-4be4b501587e.png)
+
+According to the predict analysis and visualization, the model has a significant lag.
+
