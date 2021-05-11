@@ -23,11 +23,23 @@ The following figure is the neural unit structure of the LSTM neural network. Sp
 
 ## 3. LSTM Python Coding Part
 
-### 3.1 Data
+### 3.1 Data 
 
-Data gained from JoinQuant:
+#### Data Acquisition
+
+Data gained from JoinQuant: select _"600519.XSHG" MaoTai_ as stock_code
 ```
 df = get_bars(security="600519.XSHG", count=5000, unit='1d',
          fields=['date','open','high','low','close','volume','money'],
          include_now=False, end_dt=None, fq_ref_date=None, df=True)
 ```
+
+#### Data Process: Standardization
+
+The data dimension is different, the value size is very different. Therefore, we need to introduce data standardization. Data standardization processing mainly includes data synchemotaxis and dimensionless processing. There are many methods of data standardization: min-max standardization, z-score standardization.
+
+**Min-max standardization formula is: new data = (original data - minimum value)/(maximum - minimum value)**
+
+**Z-score standardization formula is: new data = (original data - mean)/standard deviation**
+
+The standardization method adopted in this case is Z-score standardization first, then min-max standardization.
